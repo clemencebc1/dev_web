@@ -12,6 +12,11 @@
             <li>Author {{ b.author }}</li>
             <li>Price {{ b.price }}</li>
             <li>URL : <a href="{{ b.url }}">lien</a></li>
+            {% if current_user.is_authenticated %}
+                <li><a class="user_text" href="{{ url_for('edit_author',id=b.id) }}" >
+                    <span class="edit" title="Edit"
+                    > edit nom autheur</span ></a></li>
+            {% endif %}
         </ul>
     </div>
 {% endblock %}
