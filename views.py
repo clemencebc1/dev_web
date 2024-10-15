@@ -60,6 +60,8 @@ def save_author():
     a = get_author(int(f.id.data))
     return render_template ("edit-author.html",
     author=a, form=f)
+
+    
     
 class LoginForm(FlaskForm):
     username = StringField('Username')
